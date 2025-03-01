@@ -54,15 +54,32 @@
     
     <section id="about" class="container mt-5 text-center">
         <h3 class="text-2xl font-semibold text-red-600">About Us</h3>
-        <p class="mt-3">We specialize in providing cutting-edge technical services to individuals and businesses.</p>
+        <p class="mt-3">
+            <strong>Paul Galleria</strong> is a trusted service provider specializing in GST management. We offer seamless solutions for GST registration and return filing, ensuring compliance with the latest tax regulations.  
+        </p>
+        <p class="mt-3">
+            Whether you're an <strong>Individual Business Owner</strong>, a registered <strong>OPC, LLP, or Private Limited Company</strong>, we are the right partner for your GST needs. Our expert team provides end-to-end GST compliance solutions tailored for businesses of all sizes.
+        </p>
+        <p class="mt-3">
+            <strong>Our Services Include:</strong>
+        </p>
+        <ul class="list-unstyled mt-2">
+            <li>✔ GST Registration & Return Filing</li>
+            <li>✔ Compliance Assistance for Individuals & Companies</li>
+            <li>✔ Support for Rent Agreements</li>
+            <li>✔ Assistance in Opening a Current Bank Account</li>
+            <li>✔ NOC (No Objection Certificate) Support</li>
+        </ul>
+        <p class="mt-4"><strong>Join us today and ensure hassle-free GST compliance!</strong></p>
     </section>
+    
     
     <section id="services" class="services text-center">
         <h3 class="text-2xl font-semibold text-red-600">Our Services</h3>
         <div class="container mt-4">
             <div class="row">
                 <div class="col-md-4">
-                    <a href="gst-services.html" class="text-decoration-none text-dark">
+                    <a href="GST.html" class="text-decoration-none text-dark">
                         <div class="service-box">
                             <i class="fas fa-file-invoice-dollar"></i>
                             <h4>GST Services</h4>
@@ -71,7 +88,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="accounting-taxation.html" class="text-decoration-none text-dark">
+                    <a href="acount.html" class="text-decoration-none text-dark">
                         <div class="service-box">
                             <i class="fas fa-calculator"></i>
                             <h4>Accounting & Taxation</h4>
@@ -80,7 +97,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="company-registration.html" class="text-decoration-none text-dark">
+                    <a href="company.html" class="text-decoration-none text-dark">
                         <div class="service-box">
                             <i class="fas fa-building"></i>
                             <h4>Company Registration</h4>
@@ -152,7 +169,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="other-registrations.html" class="text-decoration-none text-dark">
+                    <a href="other_shop.html" class="text-decoration-none text-dark">
                         <div class="service-box">
                             <i class="fas fa-file-signature"></i>
                             <h4>Other Registrations</h4>
@@ -179,6 +196,9 @@
                     <input type="email" class="form-control" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="mb-3">
+                    <input type="number" class="form-control" id="phone_number" placeholder="Your Phone Number" required>
+                </div>
+                <div class="mb-3">
                     <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-danger">Send Message</button>
@@ -198,42 +218,49 @@
     </footer>
     
     <script>
-        document.getElementById('sidebarToggle').addEventListener('click', function() {
-            const sidebar = document.getElementById('sidebar');
-            if (sidebar.style.transform === 'translateX(0px)') {
-                sidebar.style.transform = 'translateX(100%)';
-            } else {
-                sidebar.style.transform = 'translateX(0px)';
-            }
-        });
-
         document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault();
+    event.preventDefault();
 
-        let name = document.getElementById("name").value;
-        let email = document.getElementById("email").value;
-        let message = document.getElementById("message").value;
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let number = document.getElementById("phone_number").value;
+    let message = document.getElementById("message").value;
 
-        // Prepare FormSubmit API URL
-        let formData = new FormData();
-        formData.append("name", name);
-        formData.append("email", email);
-        formData.append("message", message);
+    let formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("phone_number", number);
+    formData.append("message", message);
 
-        // Replace 'your-email@example.com' with your actual email address
-        fetch("https://formsubmit.co/ajax/paulgalleria1@gmail.com ", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success === "true") {
-                document.getElementById("responseMessage").style.display = "block";
-                document.getElementById("contactForm").reset(); // Clear the form
-            }
-        })
-        .catch(error => console.error("Error:", error));
+    fetch("https://formsubmit.co/ajax/8275e30f1796dc6587702aa4759f2dde", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) { // Check for boolean true
+            let responseMessage = document.getElementById("responseMessage");
+            responseMessage.style.display = "block";
+            responseMessage.textContent = "Message sent successfully!";
+            responseMessage.style.color = "green";
+            
+            // Clear form fields
+            document.getElementById("contactForm").reset();
+
+            // Hide the success message after 3 seconds
+            setTimeout(() => {
+                responseMessage.style.display = "none";
+            }, 3000);
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        let responseMessage = document.getElementById("responseMessage");
+        responseMessage.style.display = "block";
+        responseMessage.textContent = "Failed to send message. Please try again.";
+        responseMessage.style.color = "red";
     });
+});
 
             
     </script>
