@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Galleria</title>
+    <title>GST Services - Paul Galleria</title>
+    <link rel="icon" type="image/x-icon" href="paul_galleria_favicon.ico">
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -13,20 +14,52 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <style>
-        .contact-btn {
-            background-color: #007bff; /* Bootstrap primary blue */
+        body { font-family: 'Inter', sans-serif; background-color: #f5f7fa; color: #333; }
+        .hero {
+            background: url('image2.jpg') center/cover no-repeat;
+            position: relative;
             color: white;
-            padding: 12px 20px;
+            text-align: center;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        .list-group-item { background: white; border-left: 4px solid #d97706; }
+        .contact-btn {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            padding: 14px 24px;
             border: none;
-            border-radius: 8px;
+            border-radius: 50px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
-            transition: background 0.3s ease;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
         }
         .contact-btn:hover {
-            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .footer {
+            background: #d97706;
+            color: white;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
@@ -34,50 +67,51 @@
 <body class="bg-gray-100 min-h-screen flex flex-col">
 
     <!-- Header -->
-    <header class="bg-black text-white d-flex align-items-center py-3 px-4 shadow">
-        <a href="index.html" class="text-white text-decoration-none">
-            <h1 class="ms-3 flex-grow-1 text-3xl font-bold">Paul Galleria</h1>
-        </a>
+    <a href="index.html">
+    <header class="bg-black text-white d-flex align-items-center py-3 px-3 position-relative">
+       
+        <img src="logo_paul_galler-removebg-preview.png" alt="Paul Galleria Logo" class="h-10 w-auto rounded-lg">
+        <span class="text-2xl font-bold text-[#d97706] font-serif ms-3" style="font-family: Playfair Display, serif;">Paul Galleria</span>
+    
     </header>
+</a>
+    
 
-    <!-- Main Content -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content text-center">
+            <h1 class="text-4xl font-bold mb-3">Comprehensive GST Solutions</h1>
+            <p class="text-lg max-w-2xl mx-auto">Simplifying GST compliance for businesses of all sizes with expert guidance and seamless processes.</p>
+        </div>
+    </section>
+
+    <!-- GST Overview -->
     <main class="container my-5 flex-grow">
         <section class="text-center">
-            <h2 class="text-2xl font-semibold text-red-600">Welcome to Paul Galleria</h2>
+            <h2 class="text-2xl font-semibold text-orange-700">GST Returns Overview</h2>
             <p class="mt-3 text-gray-700">
-                Your trusted partner for hassle-free GST compliance.
-            </p>
-        </section>
-
-        <section class="mt-5">
-            <h3 class="text-xl font-semibold text-gray-800">GST Returns Overview</h3>
-            <p class="mt-2 text-gray-700">
                 All registered businesses must file GST returns based on their business type. Here’s a quick breakdown:
             </p>
-            <ul class="list-group mt-3">
-                <li class="list-group-item">GSTR-3B: Monthly filing for all registered non-composition businesses.</li>
-                <li class="list-group-item">GSTR-1: Monthly filing if turnover exceeds ₹1.5 crores (or quarterly if below ₹1.5 crores).</li>
-                <li class="list-group-item">Composition Holders: Must file quarterly returns.</li>
+            <ul class="list-group mt-3 shadow-sm">
+                <li class="list-group-item"><strong>GSTR-3B:</strong> Monthly filing for all registered non-composition businesses.</li>
+                <li class="list-group-item"><strong>GSTR-1:</strong> Monthly filing if turnover exceeds ₹1.5 crores (or quarterly if below ₹1.5 crores).</li>
+                <li class="list-group-item"><strong>Composition Holders:</strong> Must file quarterly returns.</li>
             </ul>
         </section>
         <div class="text-center mt-5">
             <a href="https://wa.me/9863214779" target="_blank">
                 <button class="contact-btn">
-                    <i class="fab fa-whatsapp me-2"></i> Contact Me
+                    <i class="fab fa-whatsapp"></i> Get GST Assistance
                 </button>
             </a>
         </div>
-        
     </main>
 
-    
-    
- 
-
     <!-- Footer -->
-    <footer class="bg-black text-white text-center py-3 mt-auto">
-        <p class="mb-0">&copy; 2025 Paul Galleria. All rights reserved.</p>
+    <footer class="bg-black text-white text-center py-4 mt-5">
+        <p>&copy; 2025 Paul Galleria. All rights reserved.</p>
     </footer>
+    
 
 </body>
 </html>
