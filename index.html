@@ -54,11 +54,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
-        .hero::before {
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .slide::before {
             content: "";
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.6);
         }
         .hero-content {
@@ -113,13 +127,39 @@
     </div>
 </header>
 
+<!-- First, make sure the script is placed after the hero section -->
 <section class="hero">
+    <div class="slide active" style="background: url('business-chart.jpg') center/cover no-repeat;"></div>
+    <div class="slide" style="background: url('image2.jpg') center/cover no-repeat;"></div>
+    <div class="slide" style="background: url('image3.jpeg') center/cover no-repeat;"></div>
     <div class="hero-content text-center">
         <h1 class="text-4xl font-bold mb-3">GST & Financial Services in Dimapur</h1>
         <p class="text-lg text-gray-300 max-w-2xl mx-auto">Professional assistance for GST filing, accounting, and business registration. Serving businesses across Nagaland.</p>
         <a href="#services" class="mt-4 inline-block bg-orange-500 text-white px-8 py-3 rounded-full shadow-lg hover:bg-orange-600 hover:scale-105 transition duration-300">Explore Our Services</a>
     </div>
 </section>
+
+<script>
+    function startSlideshow() {
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        
+        function nextSlide() {
+            // Remove active class from current slide
+            slides[currentSlide].classList.remove('active');
+            // Calculate next slide index
+            currentSlide = (currentSlide + 1) % slides.length;
+            // Add active class to next slide
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Start the slideshow
+        setInterval(nextSlide, 5000);
+    }
+
+    // Make sure the DOM is fully loaded before starting
+    document.addEventListener('DOMContentLoaded', startSlideshow);
+</script>
 
 <section id="about" class="container mt-5">
     <div class="about-section text-center">
