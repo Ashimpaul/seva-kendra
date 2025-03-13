@@ -11,17 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <style>
-        /* Same styles as trademark.html */
         body { font-family: 'Inter', sans-serif; }
         .service-header {
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-            padding: 60px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('company.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
             color: white;
             text-align: center;
         }
-        .service-content {
-            padding: 50px 0;
-        }
+        .service-content { padding: 50px 0; }
         .service-card {
             background: white;
             border-radius: 10px;
@@ -30,9 +29,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
+        .service-card:hover { transform: translateY(-5px); }
         .info-card {
             background: #f8f9fa;
             border-radius: 8px;
@@ -42,131 +39,103 @@
     </style>
 </head>
 <body>
+    <header class="bg-black text-white d-flex align-items-center py-3 px-3 position-relative">
+        <a href="index.html" class="text-white text-decoration-none d-flex align-items-center">
+            <img src="logo_paul_galler-removebg-preview.png" alt="Paul Galleria Logo" class="h-10 w-auto rounded-lg">
+            <span class="text-2xl font-bold text-[#d97706] font-serif ms-3" style="font-family: Playfair Display, serif;">Paul Galleria</span>
+        </a>
+    </header>
 
-<header class="bg-black text-white d-flex align-items-center py-3 px-3 position-relative">
-    <a href="index.html" class="text-white text-decoration-none d-flex align-items-center">
-        <img src="logo_paul_galler-removebg-preview.png" alt="Paul Galleria Logo" class="h-10 w-auto rounded-lg">
-        <span class="text-2xl font-bold text-[#d97706] font-serif ms-3" style="font-family: Playfair Display, serif;">Paul Galleria</span>
-    </a>
-</header>
-
-<div class="service-header">
-    <div class="container">
-        <h1 class="text-4xl font-bold mb-3">Company Registration Services</h1>
-        <p class="text-lg">Professional Company Registration Solutions in Dimapur</p>
+    <div class="service-header">
+        <div class="container">
+            <h1 class="text-4xl font-bold mb-3">Company Registration Services</h1>
+            <p class="text-lg">Start Your Business Journey with Expert Guidance</p>
+        </div>
     </div>
-</div>
 
-<div class="service-content">
-    <div class="container">
-        <div class="info-section">
-            <h2 class="text-2xl font-semibold mb-4">Types of Company Registration</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="info-card">
-                        <h4 class="font-semibold mb-2">Private Limited</h4>
-                        <p>Most popular form for startups and small-medium businesses</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="info-card">
-                        <h4 class="font-semibold mb-2">OPC</h4>
-                        <p>One Person Company for solo entrepreneurs</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="info-card">
-                        <h4 class="font-semibold mb-2">LLP</h4>
-                        <p>Limited Liability Partnership for professional services</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="info-card">
-                        <h4 class="font-semibold mb-2">Partnership Firm</h4>
-                        <p>Traditional business structure for multiple owners</p>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="text-xl font-semibold mt-5 mb-3">Our Services</h3>
+    <div class="service-content">
+        <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="service-card">
                         <i class="fas fa-building text-orange-500 fa-3x mb-3"></i>
-                        <h4>Company Formation</h4>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Name Reservation</li>
-                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Document Filing</li>
-                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Certificate Processing</li>
+                        <h3 class="text-xl font-semibold mb-2">Private Limited Company</h3>
+                        <p>Complete registration process with compliance support</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Name Approval</li>
+                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Documentation</li>
+                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Certificate Delivery</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i class="fas fa-file-signature text-orange-500 fa-3x mb-3"></i>
-                        <h4>Documentation</h4>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>MOA & AOA Preparation</li>
-                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Legal Documentation</li>
-                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Compliance Support</li>
+                        <i class="fas fa-handshake text-orange-500 fa-3x mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">LLP Registration</h3>
+                        <p>Limited Liability Partnership formation services</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Partner Agreement</li>
+                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>DPIN Application</li>
+                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>LLP Registration</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i class="fas fa-tasks text-orange-500 fa-3x mb-3"></i>
-                        <h4>Post Registration</h4>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Bank Account Opening</li>
-                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>GST Registration</li>
-                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Compliance Setup</li>
+                        <i class="fas fa-user-tie text-orange-500 fa-3x mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">OPC Registration</h3>
+                        <p>One Person Company registration made easy</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>DIN Application</li>
+                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>DSC Registration</li>
+                            <li><i class="fas fa-check-circle text-green-500 me-2"></i>Complete Setup</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <h3 class="text-xl font-semibold mt-5 mb-3">Documents Required</h3>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="info-card">
-                        <h4 class="font-semibold mb-3">For Directors</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-image text-orange-500 me-2"></i>Passport Size Photograph</li>
-                            <li class="mb-2"><i class="fas fa-file-alt text-orange-500 me-2"></i>Address Proof (Bank statement/Electricity bill - not more than 2 months old)</li>
-                            <li class="mb-2"><i class="fas fa-id-card text-orange-500 me-2"></i>PAN Card and Aadhar Card</li>
-                            <li class="mb-2"><i class="fas fa-id-badge text-orange-500 me-2"></i>Identity Proof (Driving license/Voter ID/Passport)</li>
-                            <li class="mb-2"><i class="fas fa-envelope text-orange-500 me-2"></i>Email ID and Mobile Number</li>
-                            <li class="mb-2"><i class="fas fa-signature text-orange-500 me-2"></i>Digital Signature Certificate</li>
-                            <li class="mb-2"><i class="fas fa-file-contract text-orange-500 me-2"></i>DIR-2 Form</li>
-                        </ul>
+            <div class="mt-5">
+                <h2 class="text-2xl font-semibold mb-4">Registration Process</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="info-card text-center">
+                            <i class="fas fa-file-signature text-orange-500 fa-2x mb-3"></i>
+                            <h4 class="font-semibold">Step 1</h4>
+                            <p>Document Collection</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="info-card">
-                        <h4 class="font-semibold mb-3">For Office & Company</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-building text-orange-500 me-2"></i>Registered Office Address Proof (Electricity/Telephone/Gas Bill - not more than 2 months old)</li>
-                            <li class="mb-2"><i class="fas fa-file-signature text-orange-500 me-2"></i>Rent Agreement on Rs. 100 stamp paper with Notary (Company name with complete address)</li>
-                            <li class="mb-2"><i class="fas fa-file-alt text-orange-500 me-2"></i>NOC on Rs. 100 stamp paper (Company name must be mentioned)</li>
-                            <li class="mb-2"><i class="fas fa-file-contract text-orange-500 me-2"></i>Board Resolution authorising investment</li>
-                        </ul>
-                        <div class="mt-3 p-2 bg-orange-100 rounded">
-                            <p class="mb-0"><i class="fas fa-info-circle text-orange-500 me-2"></i>Note: Government Fees Extra</p>
+                    <div class="col-md-3">
+                        <div class="info-card text-center">
+                            <i class="fas fa-search text-orange-500 fa-2x mb-3"></i>
+                            <h4 class="font-semibold">Step 2</h4>
+                            <p>Name Approval</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info-card text-center">
+                            <i class="fas fa-file-alt text-orange-500 fa-2x mb-3"></i>
+                            <h4 class="font-semibold">Step 3</h4>
+                            <p>Filing & Processing</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info-card text-center">
+                            <i class="fas fa-certificate text-orange-500 fa-2x mb-3"></i>
+                            <h4 class="font-semibold">Step 4</h4>
+                            <p>Certificate Delivery</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<a href="https://wa.me/9863214779" target="_blank" class="whatsapp-button position-fixed" style="bottom: 20px; right: 20px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000;">
-    <i class="fab fa-whatsapp"></i>
-</a>
+    <a href="https://wa.me/9863214779" target="_blank" class="whatsapp-button position-fixed" style="bottom: 20px; right: 20px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<footer class="bg-black text-white text-center py-4 mt-5">
-    <p>&copy; 2025 Paul Galleria. All rights reserved.</p>
-</footer>
-
+    <footer class="bg-black text-white text-center py-4 mt-5">
+        <p>&copy; 2025 Paul Galleria. All rights reserved.</p>
+    </footer>
 </body>
 </html>

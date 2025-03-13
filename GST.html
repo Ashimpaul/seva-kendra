@@ -13,8 +13,10 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .service-header {
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-            padding: 60px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('gst.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
             color: white;
             text-align: center;
         }
@@ -44,25 +46,33 @@
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             padding: 15px;
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .service-header h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .service-header p {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
+    <header class="bg-black text-white d-flex align-items-center py-3 px-3 position-relative">
+        <a href="index.html" class="text-white text-decoration-none d-flex align-items-center">
+            <img src="logo_paul_galler-removebg-preview.png" alt="Paul Galleria Logo" class="h-10 w-auto rounded-lg">
+            <span class="text-2xl font-bold text-[#d97706] font-serif ms-3" style="font-family: Playfair Display, serif;">Paul Galleria</span>
+        </a>
+    </header>
 
-<header class="bg-black text-white d-flex align-items-center py-3 px-3 position-relative">
-    <a href="index.html" class="text-white text-decoration-none d-flex align-items-center">
-        <img src="logo_paul_galler-removebg-preview.png" alt="Paul Galleria Logo" class="h-10 w-auto rounded-lg">
-        <span class="text-2xl font-bold text-[#d97706] font-serif ms-3" style="font-family: Playfair Display, serif;">Paul Galleria</span>
-    </a>
-</header>
-
-<div class="service-header">
-    <div class="container">
-        <h1 class="text-4xl font-bold mb-3">GST Services</h1>
-        <p class="text-lg">Comprehensive GST Solutions for Your Business</p>
+    <div class="service-header">
+        <div class="container">
+            <h1 class="text-4xl font-bold mb-3">GST Services</h1>
+            <p class="text-lg">Comprehensive GST Solutions for Your Business</p>
+        </div>
     </div>
-</div>
-
 <div class="service-content">
     <div class="container">
         <div class="row">
